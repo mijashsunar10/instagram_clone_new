@@ -21,6 +21,6 @@ export default {
         themes:[ 'light'],
     },//if not done this its gonna add 20 30 layouts
 
-    plugins: [forms,require('daisyui')],
+    plugins: [forms,require('daisyui'),require('tailwind-scrollbar-hide')],
 
 };

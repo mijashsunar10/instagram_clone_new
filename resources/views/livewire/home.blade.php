@@ -14,7 +14,7 @@
             {{-- Stories --}}
             <section>
 
-                <ul class="flex overflow-x-auto items-center gap-2">
+                <ul class="flex overflow-x-auto items-center gap-2  scrollbar-hide">
                     
                         {{-- Heere if image source is not available then avatar source will automativally come here --}}
                       
