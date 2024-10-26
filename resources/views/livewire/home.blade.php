@@ -17,7 +17,7 @@
                 <ul class="flex overflow-x-auto items-center gap-2">
                     
                         {{-- Heere if image source is not available then avatar source will automativally come here --}}
-                        {{-- <x-avatar src="https://source.unsplash.com/500x500?face" class="h-14 w-14"/>  --}}
+                      
                         {{-- <x-avatar story src="https://picsum.photos/500" class="h-14 w-14"/>  --}}
                         {{-- <x-avatar src="https://source.unsplash.com/random/500x500/?face,portrait" class="h-14 w-14" /> --}}
 
@@ -26,7 +26,7 @@
 
                            
                                 <x-avatar story src="https://picsum.photos/500?random={{ rand(1, 100000) }}" class="h-14 w-14"/> 
-
+                                  {{-- <x-avatar src="https://source.unsplash.com/500x500?face-{{$i}}" class="h-14 w-14"/>  --}}
                                
                                 <p class="text-xs font-medium truncate">
                                     {{fake()->name}}
@@ -34,13 +34,6 @@
                             </p>
                         </li>
                         @endfor
-                       
-
-                       
-
-
-                    
-
                 </ul>
 
             </section>
