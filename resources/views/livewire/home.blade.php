@@ -66,6 +66,16 @@
 
             </section>
 
+            {{-- posts --}}
+
+            <section class="mt-5 space-y-4 p2">
+                
+                <livewire:post.item/>
+
+            </section>
+
+
+
         </aside>
 
         {{-- suggestions --}}
