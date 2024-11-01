@@ -29,5 +29,14 @@
 
     </header>
 
+    {{-- main --}}
+
+    <main>
+        <div class="my-2">
+            <x-video source="https://cdn.devdojo.com/pines/videos/coast.mp4" />
+        </div>
+    </main>
+    
+
 
 </div>
