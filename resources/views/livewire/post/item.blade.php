@@ -85,6 +85,19 @@
         {{-- view post modal --}}
         <button class="text-slate-500/90 text-sm font-medium">View all 456 comments</button>
 
+        {{-- leave comments --}}
+
+        <form x-data="{inputText:''}" action="" class="grid grid-cols-12 items-center w-full">
+            @csrf
+            <input type="text" placeholder="Leave a comment" class="border-0 col-span-10 placeholder:text-sm outline-none focus:outline-none px-0 rounded-lg hover:ring-0 focus:ring-0">
+            <div class="col-span-1 ml-auto flex justify-end text-right">
+                <button class="text-sm font-semibold flex justify-end text-blue-500">
+                    Post
+                </button>
+            </div>
+
+            <span class="col-span-1 ml-auto"></span>
+        </form>
         
         
     </footer>
