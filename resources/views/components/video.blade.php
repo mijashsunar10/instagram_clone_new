@@ -2,7 +2,7 @@
         'source'=>' https://cdn.devdojo.com/pines/videos/coast.mp4'
         ])
 
-<div x-data="{playing:false,muted:false}" class="relative h-full w-ful m-auto">
+<div x-data="{playing:false,muted:false}" class="relative h-full w-ful m-auto " @click.outside="$ref.player.pause()" x-intersect:leave="$refs.player.pause()">
 
     {{-- playing:flase =  indicating the video is not playing by default.  --}}
 
@@ -12,6 +12,7 @@
         <source src="{{$source}}" type="video/mp4">
             Your browser doesnot support HTML5 video
     </video> --}}
+    
 
     <video  x-ref="player" @play="playing=true" @pause="playing=false" class="h-full max-h-[500px] w-full">
         <source src="{{$source}}" type="video/mp4">
