@@ -33,29 +33,45 @@
 
     <main>
         <div class="my-2">
-            {{-- <x-video source="https://cdn.devdojo.com/pines/videos/coast.mp4" /> --}}
             <!-- Slider main container -->
-                <div class="swiper">
+            <div 
+                x-init="
+                    new Swiper($el, {
+                        modules: [Navigation, Pagination],
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                "
+                class="swiper h-[500px] border bg-white"
+            >
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div x-cloak class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide"><x-video source="https://cdn.devdojo.com/pines/videos/coast.mp4" /></div>
+                    <div class="swiper-slide"><img src="https://images.pexels.com/photos/28050583/pexels-photo-28050583/free-photo-of-kapadokya.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-[500px] w-full block object-scale-down"></div>
                     <div class="swiper-slide"><x-video source="https://cdn.devdojo.com/pines/videos/coast.mp4" /></div>
-                    <div class="swiper-slide"><x-video source="https://cdn.devdojo.com/pines/videos/coast.mp4" /></div>
-                    ...
+                    <!-- Add more slides as needed -->
                 </div>
-                <!-- If we need pagination -->
+    
+                <!-- Pagination -->
                 <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
+    
+                <!-- Navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
+    
+                <!-- Scrollbar (optional) -->
                 <div class="swiper-scrollbar"></div>
-                </div>
+            </div>
         </div>
     </main>
+    
 
     {{-- footer --}}
      
